@@ -1,0 +1,43 @@
+
+function redireccion(){
+    location.href="index.html"
+}
+
+
+ $("#PAGAR").on("click",function (e) { 
+    e.preventDefault();
+    Nombre =$("#Nombre").val();
+    if ( Nombre =="") { 
+        alert("falta llenar carachoo!!!");
+    };
+ });
+
+
+
+ 
+ $("#PAGAR").on("click", function (e) {
+    e.preventDefault();
+            Edad = $("#Edad").val();
+            genero = $("#genero").val();
+                if (Edad <25 && genero=='femenino' ) {
+                    alert("No se puede registrar mujeres menor a 25 años");
+                }else if (Edad <20 && genero=='masculino') {
+                    alert("No se puede registrar Hombres menor a 20 años"); 
+                }else if (Edad >=25 && genero=='femenino') {
+                    $("#miModal").modal("show");
+                }else if (Edad >=20 && genero=='masculino') {
+                    $("#miModal").modal("show");
+                };
+});
+
+
+
+    
+
+
+
+    
+    
+   
+
+          
